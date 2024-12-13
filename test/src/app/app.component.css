@@ -1,0 +1,265 @@
+/* Global styles */
+
+.titleText{
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 22px;
+    text-align: left;
+}
+
+.mediumText{
+    font-size: 16px;
+    line-height: 123.5%;
+    text-align: left;
+}
+
+.smallText{
+    font-size: 14px;
+    line-height: 16px;
+    text-align: left;
+}
+
+.colorBlack{
+    color: var(--black600--color);
+}
+
+.smallIcons{
+    width: 16px;
+    min-width: 16px;
+    height: 16px;
+    aspect-ratio: 1/1;
+}
+
+/* End Global styles */
+
+/* ------------------------------------ */
+
+.surveys-mainContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white700--color);
+    min-height: 100dvh;
+    width: 100dvw;
+    height: fit-content;
+    padding: 3rem 5%;
+}
+
+.surveys-contentTemplate{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    border: 1px solid var(--gray350--color)
+}
+
+/* Left Side upper content styles */
+
+.surveys-contentTemplate-upperContent{
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid var(--gray350--color);
+}
+
+.contentTemplate-upperContent-leftSideContent{
+    display: flex;
+    flex-direction: column;
+}
+
+/* Left Side Main information styles */
+
+.upperContent-leftSideContent-mainInformation{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 31px 32px;
+    background-color: var(--gray50--color);
+}
+
+.mainInformation-siteContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--gray300--color);
+    border-radius: 6px;
+    padding: 12px;
+    gap: 6px;
+}
+
+.mainInformation-siteContainer > p{
+    text-transform: uppercase;
+    font-weight: 550;
+}
+
+.mainInformation-participantsContainer{
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+}
+
+.mainInformation-dateContainer{
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+}
+
+.mainInformation-dataText{
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+    align-items: center;
+}
+
+/* end Left Side Main information styles */
+
+/* ------------------------------------ */
+
+/* Left Side survey information styles */
+
+.upperContent-leftSideContent-surveyCheckIns{
+    display: flex;
+    padding: 31px 32px;
+    background-color: var(--white700--color);
+    border-top: 1px solid var(--gray350--color);
+}
+
+.surveyCheckIns-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
+
+.surveyCheckIns-container > svg{
+    min-width: 24px;
+    width: 24px;
+    height: 24px;
+    aspect-ratio: 1/1;
+    background-color: var(--magenta500--color);
+}
+
+.surveyCheckIns-content{
+    display: flex;
+    flex-direction: column;
+}
+
+.surveyCheckIns-surveyDate-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.surveyCheckIns-surveyDate-container > p:nth-of-type(1){
+    font-weight: 700;
+}
+
+.surveyCheckIns-surveyDate-container > hr{
+    width: 2px;
+    height: 8px;
+    border: none;
+    border-radius: 3px;
+    background-color: var(--magenta500--color);
+}
+
+.surveyCheckIns-surveyAmount-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.surveyCheckIns-targetIcons-container{
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+}
+
+.surveyAmount-amountMetContent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    background-color: var(--magenta500--color);
+    padding: 4px 6px;
+    min-width: 170px;
+    border-radius: 4px;
+}
+
+.surveyAmount-amountMetContent > p{
+    color: var(--white700--color);
+    font-weight: bold;
+}
+
+.surveyAmount-targetIcon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--magenta500--color);
+    padding: 4px 7px;
+    border-radius: 4px 0px 0px 4px;
+}
+
+.surveyAmount-numberAmount{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.surveyAmount-numberAmount > p{
+    font-weight: 700;
+}
+
+/* end Left survey information styles */
+
+/* end Left Side upper content styles */
+
+/* ------------------------------------ */
+
+/* Right Side upper content styles */
+
+.contentTemplate-upperContent-rightSideContent{
+    width: 100%;
+    background-color: var(--gray50--color);
+    padding: 12px 20px;
+    transition: all .3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: unset;
+    border-top: 1px solid var(--gray350--color);
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.contentTemplate-upperContent-rightSideContent:hover{
+    background-color: var(--blue500--color);
+}
+
+.contentTemplate-upperContent-rightSideContent > svg{
+    width: 30px;
+    height: 30px;
+    aspect-ratio: 1/1;
+    transform: rotate(180deg);
+    transition: all .3s ease;
+}
+
+.contentTemplate-upperContent-rightSideContent > svg > g > path{
+    fill: var(--gray500--color);
+    transition: all .3s ease;
+}
+
+.contentTemplate-upperContent-rightSideContent:hover > svg > g > path {
+    fill: var(--white700--color);
+}
+
+
+/* end Right Side upper content styles */
+
+
+@media screen and (min-width: 1024px) {
+    
+}
