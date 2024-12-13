@@ -1,1 +1,74 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Work Sans', sans-serif;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+:root{
+    --red500--color: #FF246D;
+    --black500--color: #212327;
+    --black600--color: #16171A;
+    --gray50--color: #F9F9F9;
+    --gray100--color: #F6F4F4;
+    --gray300--color: #E8EAEB;
+    --gray350--color: #D7DBDF;
+    --gray500--color: #86909E;
+    --gray700--color: #35383F;
+    --white700--color: #FFFFFF;
+    --magenta200--color: #EADCF3;
+    --magenta500--color: #B15DCB;
+    --azure500--color: #0396FF;
+    --blue500--color: #24C4C8;
+}
