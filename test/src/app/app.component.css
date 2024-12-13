@@ -99,6 +99,7 @@
     flex-direction: row;
     align-items: center;
     background-color: var(--gray300--color);
+    width: fit-content;
     border-radius: 6px;
     padding: 12px;
     gap: 6px;
