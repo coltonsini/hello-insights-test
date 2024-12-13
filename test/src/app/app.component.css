@@ -47,6 +47,7 @@
 
 .surveys-contentTemplate{
     width: 100%;
+    max-width: 1158px;
     display: flex;
     flex-direction: column;
     border-radius: 8px;
@@ -57,13 +58,28 @@
 
 .surveys-contentTemplate-upperContent{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     border-bottom: 1px solid var(--gray350--color);
+    border-radius: 8px 8px 0px 0px;
 }
 
 .contentTemplate-upperContent-leftSideContent{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1078px;
+}
+
+@media screen and (min-width: 1024px) {
+    .surveys-contentTemplate-upperContent{
+        flex-wrap: nowrap;
+    }
+
+    .contentTemplate-upperContent-leftSideContent{
+        flex-wrap: nowrap;
+    }
 }
 
 /* Left Side Main information styles */
@@ -71,9 +87,11 @@
 .upperContent-leftSideContent-mainInformation{
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 6px;
     padding: 31px 32px;
     background-color: var(--gray50--color);
+    width: 100%;
+    border-radius: 8px 8px 0px 0px;
 }
 
 .mainInformation-siteContainer{
@@ -110,6 +128,13 @@
     align-items: center;
 }
 
+@media screen and (min-width: 1024px) {
+    .upperContent-leftSideContent-mainInformation{
+        max-width: 550px;
+        border-radius: 8px 0px 0px 0px;
+    }
+}
+
 /* end Left Side Main information styles */
 
 /* ------------------------------------ */
@@ -121,6 +146,7 @@
     padding: 31px 32px;
     background-color: var(--white700--color);
     border-top: 1px solid var(--gray350--color);
+    width: 100%;
 }
 
 .surveyCheckIns-container{
@@ -213,6 +239,15 @@
     font-weight: 700;
 }
 
+@media screen and (min-width: 1024px) {
+    .upperContent-leftSideContent-surveyCheckIns{
+        padding: 24px 78px 24px 48px;
+        border-left: 1px solid var(--gray350--color);
+        border-bottom: unset;
+        max-width: 528px;
+    }
+}
+
 /* end Left survey information styles */
 
 /* end Left Side upper content styles */
@@ -254,6 +289,16 @@
 
 .contentTemplate-upperContent-rightSideContent:hover > svg > g > path {
     fill: var(--white700--color);
+}
+
+@media screen and (min-width: 1024px) {
+    .contentTemplate-upperContent-rightSideContent{
+        max-width: 80px;
+        border: unset;
+        border-top: unset;
+        border-left: 1px solid var(--gray350--color);
+        border-radius: 0px 8px 0px 0px;
+    }
 }
 
 
