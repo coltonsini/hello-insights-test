@@ -130,12 +130,14 @@
 .mainInformation-participantsContainer{
     display: flex;
     flex-direction: row;
+    align-items: center;
     gap: 6px;
 }
 
 .mainInformation-dateContainer{
     display: flex;
     flex-direction: row;
+    align-items: center;
     gap: 6px;
 }
 
@@ -179,7 +181,6 @@
     width: 24px;
     height: 24px;
     aspect-ratio: 1/1;
-    background-color: var(--magenta500--color);
 }
 
 .surveyCheckIns-content{

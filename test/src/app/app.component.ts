@@ -41,6 +41,11 @@ export class AppComponent implements OnInit {
   determinarColor(valid: number, target: number): string {
     return valid >= target ? '#B15DCB' : '#FF246D';
   }
+
+  // Función para determinar el color de relleno del SVG
+  getSvgFillColor(group: Group): string {
+    return group.valid_responses === group.response_target ? '#B15DCB' : '#86909E';
+  }
 }
 
 interface ApiResponse {
