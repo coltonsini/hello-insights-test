@@ -288,6 +288,7 @@
     border: unset;
     border-top: 1px solid var(--gray350--color);
     cursor: pointer;
+    position: relative;
     transition: all .3s ease;
 }
 
@@ -379,8 +380,11 @@
 
 .checkInStatus-triangleElement{
     position: absolute;
-    background-color: var(--magenta500--color);
-    border-radius: 10px;
+    top: 93%;
+    transform: rotate(90deg);
+    width: 14px;
+    height: 21px;       
+    z-index: 2;
 }
 
 @media screen and (min-width: 600px) {
@@ -390,12 +394,17 @@
 
     .leftSideContainer-checkInStatus{
         max-width: 80px;
-        position: relative;
         padding: 2px 2px;
     }
 
     .checkInStatus-content{
         flex-direction: column;
+    }
+
+    .checkInStatus-triangleElement{
+        top: calc(50% - 10px);
+        left: 95%;
+        transform: rotate(0deg);
     }
     
 }
