@@ -96,6 +96,15 @@
     border-radius: 8px 8px 0px 0px;
 }
 
+.upperContent-leftSideContent-mainInformation > h2{
+    display: -webkit-box;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .mainInformation-siteContainer{
     display: flex;
     flex-direction: row;
@@ -110,6 +119,12 @@
 .mainInformation-siteContainer > p{
     text-transform: uppercase;
     font-weight: 550;
+    display: -webkit-box;
+    line-clamp: 1;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .mainInformation-participantsContainer{
@@ -170,13 +185,14 @@
 .surveyCheckIns-content{
     display: flex;
     flex-direction: column;
+    gap: 4px;
 }
 
 .surveyCheckIns-surveyDate-container{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 6px;
 }
 
@@ -235,7 +251,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 6px;
+    gap: 4px;
 }
 
 .surveyAmount-numberAmount > p{
