@@ -242,7 +242,7 @@
     align-items: center;
     justify-content: center;
     background-color: var(--magenta500--color);
-    padding: 4px 7px;
+    padding: 4px 5px;
     border-radius: 4px 0px 0px 4px;
 }
 
@@ -357,11 +357,17 @@
     gap: 8px;
 }
 
-.checkInStatus-content > svg{
-    width: 42px;
-    min-width: 42px;
-    aspect-ratio: 1/1;
+.checkInStatus-content-icon{
+    padding: 10px 10px;
     background-color: var(--white700--color);
+    border-radius: 50%;
+}
+
+.checkInStatus-content-icon > svg{
+    width: 22px;
+    min-width: 22px;
+    height: 22px;
+    aspect-ratio: 1/1;
 }
 
 .checkInStatus-content > p{

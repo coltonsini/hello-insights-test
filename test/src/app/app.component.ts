@@ -30,6 +30,17 @@ export class AppComponent implements OnInit {
         // console.log(this.groups);
       });
   }
+
+  // Función para calcular el porcentaje de progreso
+  calcularPorcentaje(valid: number, target: number): number {
+    if (target === 0) return 0;
+    return Math.min((valid / target) * 100, 100);
+  }
+
+  // Función para determinar el color basado en el progreso
+  determinarColor(valid: number, target: number): string {
+    return valid >= target ? '#B15DCB' : '#FF246D';
+  }
 }
 
 interface ApiResponse {
@@ -52,3 +63,4 @@ interface Group {
   survey_link: string;
   valid_responses: number;
 }
+
