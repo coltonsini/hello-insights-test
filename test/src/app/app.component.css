@@ -36,6 +36,7 @@
 
 .surveys-mainContainer{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: var(--white700--color);
@@ -43,6 +44,7 @@
     width: 100dvw;
     height: fit-content;
     padding: 3rem 5%;
+    gap: 32px;
 }
 
 .surveys-contentTemplate{
@@ -621,7 +623,7 @@
     border: unset;
 }
 
-.downloadButtonContent-text-button > button{
+.downloadButtonContent-text-button > a{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -632,11 +634,11 @@
     transition: all .3s ease;
 }
 
-.downloadButtonContent-text-button > button:hover{
+.downloadButtonContent-text-button > a:hover{
     background-color: var(--blue500--color);
 }
 
-.downloadButtonContent-text-button > button > svg{
+.downloadButtonContent-text-button > a > svg{
     width: 22px;
     min-width: 22px;
     aspect-ratio: 1/1;
