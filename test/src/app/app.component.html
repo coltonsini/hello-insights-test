@@ -1,9 +1,11 @@
 <main>
   	<section class="surveys-mainContainer">
 		<article class="surveys-contentTemplate" *ngFor="let group of groups">
-			<header class="surveys-contentTemplate-upperContent">
+			<header class="surveys-contentTemplate-upperContent"
+					[ngClass]="{'active': openGroupId === group.id}">
 				<div class="contentTemplate-upperContent-leftSideContent">
-					<div class="upperContent-leftSideContent-mainInformation">
+					<div class="upperContent-leftSideContent-mainInformation"
+						 [ngClass]="{'active': openGroupId === group.id}">
 						<h2 class="mainInformation-name titleText">
 							{{ group.name }}
 						</h2>
@@ -152,7 +154,11 @@
 						</div>
 					</div>
 				</div>
-				<button class="contentTemplate-upperContent-rightSideContent" (click)="toggleChevron(group.id)" (click)="sendEvent('detailsButton', group.name)" id="detailsButton">
+				<button class="contentTemplate-upperContent-rightSideContent" 
+					    (click)="toggleChevron(group.id)" 
+						(click)="sendEvent('detailsButton', group.name)" 
+						[ngClass]="{'active': openGroupId === group.id}"
+						id="detailsButton">
 					<svg [ngClass]="{'rotated': openGroupId === group.id}" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<g clip-path="url(#clip0_2_12817)">
 							<path d="M-2.0166e-06 9.24945C-1.98864e-06 8.6098 0.244123 7.96984 0.732372 7.48237C1.70887 6.50587 3.2908 6.50587 4.2673 7.48237L14.999 18.2176L25.7327 7.48237C26.7092 6.50588 28.2911 6.50588 29.2676 7.48237C30.2441 8.45887 30.2441 10.0408 29.2676 11.0173L16.7684 23.5165C15.7919 24.493 14.21 24.493 13.2335 23.5165L0.734325 11.0173C0.24217 10.529 -2.04457e-06 9.88925 -2.0166e-06 9.24945Z"/>

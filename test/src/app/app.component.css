@@ -63,7 +63,6 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    border-bottom: 1px solid var(--gray350--color);
     border-radius: 8px 8px 0px 0px;
 }
 
@@ -78,6 +77,11 @@
 @media screen and (min-width: 1024px) {
     .surveys-contentTemplate-upperContent{
         flex-wrap: nowrap;
+    }
+
+    .surveys-contentTemplate-upperContent.active{
+        border-bottom: 1px solid var(--gray350--color);
+        border-radius: 8px 8px 0px 0px;
     }
 
     .contentTemplate-upperContent-leftSideContent{
@@ -152,7 +156,11 @@
 @media screen and (min-width: 1024px) {
     .upperContent-leftSideContent-mainInformation{
         max-width: 550px;
-        border-radius: 8px 0px 0px 0px;
+        border-radius: 8px 0px 0px 8px;
+    }
+
+    .upperContent-leftSideContent-mainInformation.active{
+        border-radius: 0;
     }
 }
 
@@ -295,9 +303,15 @@
     justify-content: center;
     border: unset;
     border-top: 1px solid var(--gray350--color);
+    border-bottom: 1px solid var(--gray350--color);
+    border-radius: 0px 0px 8px 8px;
     cursor: pointer;
     position: relative;
     transition: all .3s ease;
+}
+
+.contentTemplate-upperContent-rightSideContent.active{
+    border-radius: 0;
 }
 
 .contentTemplate-upperContent-rightSideContent:hover{
@@ -335,7 +349,8 @@
         border: unset;
         border-top: unset;
         border-left: 1px solid var(--gray350--color);
-        border-radius: 0px 8px 0px 0px;
+        border-radius: 0px 8px 8px 0px;
+        border-bottom: unset;
     }
 }
 
