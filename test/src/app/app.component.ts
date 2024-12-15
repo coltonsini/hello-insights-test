@@ -22,6 +22,7 @@ interface Group {
   survey_date: string;
   survey_link: string;
   valid_responses: number;
+  copied?: boolean;
 }
 
 @Component({
@@ -77,12 +78,20 @@ export class AppComponent implements OnInit {
   }
 
   // Función para copiar el enlace al portapapeles
-  copySurveyLink(link: string): void {
+  copySurveyLink(link: string, groupId: number): void {
     navigator.clipboard.writeText(link).then(() => {
+      const group = this.groups.find(g => g.id === groupId);
+      if (group) {
+        group.copied = true;
+      }
       console.log('Enlace copiado al portapapeles');
     }).catch(err => {
       console.error('Error al copiar el enlace: ', err);
     });
+  }
+  
+  resetCopied(group: Group): void {
+    group.copied = false;
   }
 }
 

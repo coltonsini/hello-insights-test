@@ -675,6 +675,7 @@
     padding: 8px;
     border-radius: 6px;
     border: none;
+    cursor: pointer;
     position: relative;
     transition: all .3s ease;
 }
@@ -725,17 +726,26 @@
     flex-direction: row;
     align-items: center;
     gap: 5px;
-    transition: all .3s ease;
+    transition: all .1s ease;
     position: absolute;
     top: 100%;
     border-radius: 6px;
     z-index: 999;
 }
 
+.tooltip-container.copied {
+    background-color:var(--magenta500--color);
+}
+
+.tooltip-container.copied > svg{
+    display: flex;
+}
+
 .tooltip-container > svg {
     width: 14px;
     min-width: 14px;
     height: 14px;
+    display: none;
 }
   
 .tooltip-text {
