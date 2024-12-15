@@ -85,7 +85,6 @@ export class AppComponent implements OnInit {
       if (group) {
         group.copied = true;
       }
-      console.log('Enlace copiado al portapapeles');
     }).catch(err => {
       console.error('Error al copiar el enlace: ', err);
     });
@@ -111,6 +110,45 @@ export class AppComponent implements OnInit {
   isTooltipOpen(groupId: number, tooltipType: string): boolean {
     const key = `${groupId}-${tooltipType}`;
     return this.openTooltips[key] || false;
+  }
+
+  // Método para enviar eventos
+  sendEvent(buttonType: string, groupName: string): void {
+    let eventName: string;
+  
+    switch(buttonType) {
+      case 'validResponses':
+        eventName = 'Valid Responses Button Clicked';
+        break;
+      case 'responseTarget':
+        eventName = 'Response Target Button Clicked';
+        break;
+      case 'detailsButton':
+        eventName = 'Details Button Clicked';
+        break;
+      default:
+        eventName = 'Unknown Event';
+    }
+  
+    const eventDescription = `The event "${eventName}" was executed for the survey named "${groupName}".`;
+  
+    const payload = {
+      token: "9Mg98",
+      event_name: eventName,
+      event_description: eventDescription
+    };
+
+    console.log('Sending event payload:', payload);
+  
+    this.http.post('https://hi-api-develop.helloinsight.org/tech-test-track-event/', payload)
+      .subscribe(
+        response => {
+          console.log('Event tracked successfully:', response);
+        },
+        error => {
+          console.error('Error tracking event:', error);
+        }
+      );
   }
 }
 
