@@ -29,7 +29,7 @@ This project is an Angular-based application designed to consume a survey API an
 
 If you don’t already have the project code on your machine, clone the repository using Git:
 ```bash
-git clone https://github.com/[user]/[repository].git
+git clone https://github.com/coltonsini/hello-insights-test.git
 ```
 
 ---
