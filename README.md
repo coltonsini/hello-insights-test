@@ -6,7 +6,8 @@ This project is an Angular-based application designed to consume a survey API an
 
 ## **Prerequisites**
 
-Before starting, make sure you have the following installed on your system:
+> [!IMPORTANT]
+> Before starting, make sure you have the following installed on your system:
 
 1. **Node.js and npm**  
    Download and install the latest stable version from [Node.js](https://nodejs.org/).
@@ -74,3 +75,7 @@ This command starts a development server that allows you to preview the applicat
    ```bash
    ng serve --port 4300
    ```
+
+> [!NOTE]
+> The content generated in this repository is just a technical test for the company, no further actions will be done on this repository.
+
