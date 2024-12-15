@@ -79,3 +79,36 @@ This command starts a development server that allows you to preview the applicat
 > [!NOTE]
 > The content generated in this repository is just a technical test for the company, no further actions will be done on this repository.
 
+---
+
+## **Using Docker**
+
+> 💡 **Feature Note: Important Information**
+>
+> In case you want to run the project using docker, I leave below the necessary steps to carry out this process.
+
+## Running the Docker Container
+
+To build and run the Docker container for this project, follow these steps:
+
+1. **Build the Docker image**:
+
+    Navigate to the root directory of the project and run the following command:
+
+    ```sh
+    docker build -t hello-insights-test .
+    ```
+
+2. **Run the Docker container**:
+
+    Once the image is built, run the container using the following command:
+
+    ```sh
+    docker run -p 4200:4200 hello-insights-test
+    ```
+
+    This will expose the application on `http://localhost:4200`.
+
+> [!TIP]
+> The Dockerfile It is already created in the root folder of the project, in case you need to modify it.
+
