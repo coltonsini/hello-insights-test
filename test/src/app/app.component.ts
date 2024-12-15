@@ -37,6 +37,7 @@ export class AppComponent implements OnInit {
   data: ApiResponse | null = null;
   groups: Group[] = [];
   openGroupId: number | null = null;
+  openTooltips: { [key: string]: boolean } = {};
 
   toggleChevron(id: number): void {
     this.openGroupId = this.openGroupId === id ? null : id;
@@ -90,8 +91,26 @@ export class AppComponent implements OnInit {
     });
   }
   
+  // Función para determinar si el enlace ha sido copiado y resetar el estilo
   resetCopied(group: Group): void {
     group.copied = false;
+  }
+
+  // Métodos para abrir y cerrar tooltips
+  openTooltip(groupId: number, tooltipType: string): void {
+    const key = `${groupId}-${tooltipType}`;
+    this.openTooltips[key] = true;
+  }
+
+  closeTooltip(groupId: number, tooltipType: string): void {
+    const key = `${groupId}-${tooltipType}`;
+    this.openTooltips[key] = false;
+  }
+
+  // Método para verificar si un tooltip está abierto
+  isTooltipOpen(groupId: number, tooltipType: string): boolean {
+    const key = `${groupId}-${tooltipType}`;
+    return this.openTooltips[key] || false;
   }
 }
 

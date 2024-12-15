@@ -309,7 +309,10 @@
     height: 30px;
     aspect-ratio: 1/1;
     transform: rotate(180deg);
-    transition: all .3s ease;
+}
+
+.contentTemplate-upperContent-rightSideContent .rotated {
+    transform: rotate(0deg);
 }
 
 .contentTemplate-upperContent-rightSideContent > svg > g > path{
@@ -512,6 +515,7 @@
     gap: 6px;
     cursor: pointer;
     border: unset;
+    position: relative;
 }
 
 .validResponses-text > p{
@@ -547,6 +551,7 @@
     gap: 6px;
     cursor: pointer;
     border: unset;
+    position: relative;
 }
 
 .responseTarget-text > p{
@@ -754,4 +759,95 @@
     font-weight: 500;
     line-height: 14px; 
     text-transform: capitalize;
+}
+
+.tooltip-responses-container{
+    display: none;
+    flex-direction: column;
+    border-radius: 6px;
+    background: var(--black500--color);
+    max-width: 322px;
+    min-width: 322px;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 999;
+    cursor: initial;
+}
+
+.tooltip-responses-container.active {
+    display: flex;
+}
+
+.tooltip-responses-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 12px 15px;
+    border-radius: 6px 6px 0px 0px;
+    border: 1px solid var(--black600--color);
+    background: var(--black600--color);
+    align-items: center;
+    gap: 4px;
+}
+
+.tooltip-responses-header-text{
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    align-items: center;
+}
+
+.tooltip-responses-header-text .svg-gray{
+    background-color: var(--gray700--color);
+}
+
+.tooltip-responses-header-text .svg-blue{
+    background-color: var(--azure500--color);
+}
+
+.tooltip-responses-header-svg{
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+}
+
+.tooltip-responses-header-svg > svg{
+    width: 12px;
+    min-width: 12px;
+    height: 12px;
+}
+
+.tooltip-responses-header-text > span{
+    color: var(--white700--color);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.tooltip-responses-header > span{
+    padding: 3px;
+    width: fit-content;
+    border: none;
+    background-color: unset;
+    cursor: pointer;
+}
+
+.tooltip-responses-body{
+    display: flex;
+    padding: 12px 16px;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 0px 0px 6px 6px;
+    border: 1px solid var(--black500--color);
+    background: var(--black500--color);
+}
+
+.tooltip-responses-body > p{
+    color: var(--white700--color);
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 16px;
+    text-align: left;
 }
