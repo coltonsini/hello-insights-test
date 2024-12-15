@@ -127,6 +127,11 @@
 													</clipPath>
 												</defs>
 											</svg>
+											<div class="tooltip-container">
+												<span class="tooltip-text">
+													Response Target
+												</span>
+											</div>
 										</span>
 									</div>
 
@@ -147,7 +152,7 @@
 						</div>
 					</div>
 				</div>
-				<button class="contentTemplate-upperContent-rightSideContent">
+				<button class="contentTemplate-upperContent-rightSideContent" (click)="toggleChevron(group.id)">
 					<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<g clip-path="url(#clip0_2_12817)">
 							<path d="M-2.0166e-06 9.24945C-1.98864e-06 8.6098 0.244123 7.96984 0.732372 7.48237C1.70887 6.50587 3.2908 6.50587 4.2673 7.48237L14.999 18.2176L25.7327 7.48237C26.7092 6.50588 28.2911 6.50588 29.2676 7.48237C30.2441 8.45887 30.2441 10.0408 29.2676 11.0173L16.7684 23.5165C15.7919 24.493 14.21 24.493 13.2335 23.5165L0.734325 11.0173C0.24217 10.529 -2.04457e-06 9.88925 -2.0166e-06 9.24945Z"/>
@@ -158,10 +163,15 @@
 						</clipPath>
 						</defs>
 					</svg>
+					<div class="tooltip-container">
+						<span class="tooltip-text">
+							Show Details
+						</span>
+					</div>
 				</button>
 			</header>
 
-			<footer class="surveys-contentTemplate-bottomContent">
+			<footer class="surveys-contentTemplate-bottomContent" [ngStyle]="{ display: openGroupId === group.id ? 'flex' : 'none' }">
 				<div class="bottomContent-leftSideContainer">
 					<div class="leftSideContainer-checkInStatus">
 						<div class="checkInStatus-content">
@@ -283,10 +293,15 @@
 								</p>
 								<div class="downloadButtonContent-text-button">
 									<hr>
-									<a [href]="group.survey_admin_kit" target="_blank" download id="surveyAdminKit">
+									<a class="customDownloadButtons" [href]="group.survey_admin_kit" target="_blank" download id="surveyAdminKit">
 										<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path d="M17.9131 20.625C18.4846 20.625 18.9443 20.1652 18.9443 19.5938C18.9443 19.0223 18.4846 18.5625 17.9131 18.5625H3.47559C2.9041 18.5625 2.44434 19.0223 2.44434 19.5938C2.44434 20.1652 2.9041 20.625 3.47559 20.625H17.9131ZM9.94238 14.7984C10.1357 15.0047 10.4107 15.125 10.6943 15.125C10.9779 15.125 11.2486 15.009 11.4463 14.7984L16.9463 8.95469C17.3373 8.53789 17.3158 7.88906 16.9033 7.49805C16.4908 7.10703 15.8377 7.12852 15.4467 7.54102L11.7256 11.4941V7.90625V2.40625C11.7256 1.83477 11.2658 1.375 10.6943 1.375C10.1229 1.375 9.66309 1.83477 9.66309 2.40625V7.90625V11.4941L5.94629 7.54531C5.55527 7.12852 4.90215 7.11133 4.48965 7.50234C4.07715 7.89336 4.05566 8.54648 4.44668 8.95898L9.94668 14.8027L9.94238 14.7984Z"/>
 										</svg>
+										<div class="tooltip-container">
+											<span class="tooltip-text">
+												Download
+											</span>
+										</div>
 									</a>
 								</div>
 							</div>
@@ -304,10 +319,15 @@
 								</p>
 								<div class="downloadButtonContent-text-button">
 									<hr>
-									<a [href]="group.backup_surveys" target="_blank" download id="backupSurveys">
+									<a class="customDownloadButtons" [href]="group.backup_surveys" target="_blank" download id="backupSurveys">
 										<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path d="M17.9131 20.625C18.4846 20.625 18.9443 20.1652 18.9443 19.5938C18.9443 19.0223 18.4846 18.5625 17.9131 18.5625H3.47559C2.9041 18.5625 2.44434 19.0223 2.44434 19.5938C2.44434 20.1652 2.9041 20.625 3.47559 20.625H17.9131ZM9.94238 14.7984C10.1357 15.0047 10.4107 15.125 10.6943 15.125C10.9779 15.125 11.2486 15.009 11.4463 14.7984L16.9463 8.95469C17.3373 8.53789 17.3158 7.88906 16.9033 7.49805C16.4908 7.10703 15.8377 7.12852 15.4467 7.54102L11.7256 11.4941V7.90625V2.40625C11.7256 1.83477 11.2658 1.375 10.6943 1.375C10.1229 1.375 9.66309 1.83477 9.66309 2.40625V7.90625V11.4941L5.94629 7.54531C5.55527 7.12852 4.90215 7.11133 4.48965 7.50234C4.07715 7.89336 4.05566 8.54648 4.44668 8.95898L9.94668 14.8027L9.94238 14.7984Z"/>
 										</svg>
+										<div class="tooltip-container">
+											<span class="tooltip-text">
+												Download
+											</span>
+										</div>
 									</a>
 								</div>
 							</div>
@@ -325,11 +345,16 @@
 								</p>
 								<div class="downloadButtonContent-text-button">
 									<hr>
-									<a [href]="group.survey_link" target="_blank" download id="surveyLink">
+									<button class="customDownloadButtons" (click)="copySurveyLink(group.survey_link)" id="surveyLink">
 										<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
 											<path d="M20.5526 10.8808C22.483 8.95035 22.483 5.82115 20.5526 3.89073C18.7149 2.05305 15.7644 1.95344 13.8065 3.66746L13.5969 3.85295C13.2534 4.15178 13.2191 4.67389 13.5179 5.01738C13.8168 5.36087 14.3389 5.39522 14.6824 5.09638L14.8919 4.9109C16.1972 3.77051 18.1619 3.83577 19.3882 5.06204C20.6728 6.34669 20.6728 8.43168 19.3882 9.71977L15.4964 13.6081C14.2118 14.8928 12.1233 14.8928 10.8387 13.6081C9.61243 12.3818 9.54716 10.4171 10.6876 9.11179L10.849 8.92631C11.1478 8.58282 11.1135 8.06415 10.77 7.76187C10.4265 7.4596 9.90783 7.49739 9.60556 7.84088L9.44412 8.02636C7.73353 9.98426 7.83314 12.9349 9.67082 14.7725C11.6012 16.7029 14.7304 16.7029 16.6609 14.7725L20.5526 10.8808ZM2.67047 10.1114C0.740051 12.0418 0.740051 15.171 2.67047 17.098C4.51158 18.9391 7.46217 19.0353 9.42007 17.3212L9.6296 17.1357C9.97309 16.8369 10.0074 16.3148 9.7086 15.9713C9.40977 15.6278 8.88766 15.5935 8.54417 15.8923L8.33464 16.0778C7.02937 17.2182 5.0646 17.1529 3.83834 15.9267C2.55368 14.642 2.55368 12.557 3.83834 11.2689L7.7301 7.38403C9.01475 6.09938 11.0997 6.09938 12.3878 7.38403C13.6141 8.6103 13.6794 10.5751 12.539 11.8803L12.3535 12.0899C12.0547 12.4334 12.089 12.952 12.4325 13.2543C12.776 13.5566 13.2947 13.5188 13.5969 13.1753L13.7824 12.9658C15.4964 11.0079 15.3968 8.05728 13.5591 6.21616C11.6287 4.28574 8.49952 4.28574 6.5691 6.21616L2.67047 10.1114Z"/>
-										</svg>											
-									</a>
+										</svg>		
+										<div class="tooltip-container">
+											<span class="tooltip-text">
+												Copy Link
+											</span>
+										</div>									
+									</button>
 								</div>
 							</div>
 						</div>

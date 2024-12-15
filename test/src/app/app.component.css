@@ -246,6 +246,14 @@
     background-color: var(--magenta500--color);
     padding: 4px 5px;
     border-radius: 4px 0px 0px 4px;
+    cursor: pointer;
+    position: relative;
+}
+
+.surveyAmount-targetIcon:hover .tooltip-container{
+    display: flex;
+    margin-top: 6px;
+    left: 100%;
 }
 
 .surveyAmount-numberAmount{
@@ -311,6 +319,11 @@
 
 .contentTemplate-upperContent-rightSideContent:hover > svg > g > path {
     fill: var(--white700--color);
+}
+
+.contentTemplate-upperContent-rightSideContent:hover .tooltip-container{
+    display: flex;
+    margin-top: 9px;
 }
 
 @media screen and (min-width: 1024px) {
@@ -654,7 +667,7 @@
     border: unset;
 }
 
-.downloadButtonContent-text-button > a{
+.customDownloadButtons{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -662,24 +675,31 @@
     padding: 8px;
     border-radius: 6px;
     border: none;
+    position: relative;
     transition: all .3s ease;
 }
 
-.downloadButtonContent-text-button > a:hover{
+.customDownloadButtons:hover{
     background-color: var(--blue500--color);
 }
 
-.downloadButtonContent-text-button > a > svg{
+.customDownloadButtons:hover .tooltip-container{
+    display: flex;
+    margin-top: 6px;
+    left: calc(50% - 5px);
+}
+
+.customDownloadButtons > svg{
     width: 22px;
     min-width: 22px;
     aspect-ratio: 1/1;
 }
 
-.downloadButtonContent-text-button > a > svg > path{
+.customDownloadButtons > svg > path{
     fill: var(--blue500--color);
 }
 
-.downloadButtonContent-text-button > a:hover > svg > path{
+.customDownloadButtons:hover > svg > path{
     fill: var(--white700--color);
 }
 
@@ -697,3 +717,31 @@
 
 /* end survey bottom content styles */
 
+.tooltip-container {
+    padding: 10px 10px;
+    background-color: var(--black600--color);
+    width: max-content;
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    transition: all .3s ease;
+    position: absolute;
+    top: 100%;
+    border-radius: 6px;
+    z-index: 999;
+}
+
+.tooltip-container > svg {
+    width: 14px;
+    min-width: 14px;
+    height: 14px;
+}
+  
+.tooltip-text {
+    color: var(--white700--color);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 14px; 
+    text-transform: capitalize;
+}
